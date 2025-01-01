@@ -1,6 +1,77 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+
+
+void main() {
+    // 7ayed commentaire dial l'exercice li bghiti it executa
+    // ex1();
+    // ex2();
+    // ex3();
+    // ex4();
+    // ex5();
+    // ex6();
+}
+
+void ex6() {
+    int n, i, j;
+    do {
+        printf("entrez n :\n");
+        scanf("%d", &n);
+    } while (n <= 0);
+    for (i = 1; i <= n;i++) {
+        for (j = 1; j <= i; j++) {
+            printf("%d", i);
+        }
+        printf("\n");
+    }
+}
+
+void ex5() {
+    int range, i, somme = 0;
+    do {
+        printf("entrez l'interval de 1 jusqu'a ? : ");
+        scanf("%d", &range);
+    } while (range <= 1);
+    
+    for (i = 1; i < range; i++ ) {
+        if (range % i == 0) {
+            somme += i;
+        }
+    }
+    if (somme == range) {
+        printf("%d est un nombre parfait !\n", range);
+    } else {
+        printf("%d n'est pas un nombre parfait !\n", range);
+    }
+}
+
+void ex4() {
+    int n, divs = 0;
+
+    printf("entrez un nombre :\n");
+    scanf("%d", &n);
+
+    if (n <= 1) {
+        printf("%d n'est pas un nombre premier\n", n);
+        return;  
+    }
+
+    for (int i = 2; i < n; i++) {  
+        if (n % i == 0) { 
+            divs++;
+            break; 
+        }
+    }
+    printf("%d\n", divs);
+    if (divs != 0) {
+        printf("%d n'est pas un nombre premier\n", n);
+    } else {
+        printf("%d est un nombre premier\n", n);
+    }
+}
+
 void ex3() {
     float n, max, min, rep_max = 0, rep_min = 0;
     int combien;
@@ -25,15 +96,6 @@ void ex3() {
     printf("le maximum est : %f et repetté %.0f fois\n", max, rep_max);
     printf("le minimum est : %f et repetté %.0f fois\n", min, rep_min);
 }
-
-
-
-
-
-
-
-
-
 
 
 void ex2() {
