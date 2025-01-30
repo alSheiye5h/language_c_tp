@@ -18,7 +18,7 @@ int main() {
         min = (reste < min) ? nombre % 10 : min ;
 
         nChfr++;
-        
+
         if (nombre % 2 == 0) 
             nChfrPair++;
         else 
@@ -29,8 +29,15 @@ int main() {
 
     } while (nombre != 0);
 
-
-
+    printf("le chiffre le plus grand est : %d\n", max);
+    printf("le chiffre le plus petit est : %d\n", min);
+    printf("le nombre de chiffre est : %d\n", nChfr);
+    printf("le nombre de chiffre Pair est : %d\n", nChfrPair);
+    printf("le nombre de chiffre Impair est : %d\n", nChfrImpair);
+    if (palindrome == nombre1) 
+        printf("le nombre est palindrome\n");
+    else 
+        printf("le nombre n'est pas palindrome\n");
 }
 
 
