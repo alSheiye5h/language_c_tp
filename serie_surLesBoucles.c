@@ -7,7 +7,7 @@ int main() {
 
     do {
         printf("entrez la note :\n")
-        scanf("%f", note);
+        scanf("%f", &note);
 
         somme += note;
         if (note < min) {
@@ -17,6 +17,12 @@ int main() {
             max = note;
         }
 
-        printf("voulais vous continuer ? :\n");
+        do {
+            printf("voulais vous continuer ? (O/N) :\n");
+            scanf(" %c", &continu);
+        } while (continu != 'O' && continu != 'o' && continu != 'N' && continu != 'n');
+        
     } while (continu == 'O' || continu == 'o');
+
+    printf("");
 }
