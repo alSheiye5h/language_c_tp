@@ -26,7 +26,9 @@ int main() {
         
     } while (continu == 'O' || continu == 'o');
 
-    moyenne = somme
+    moyenne = somme / noteCompteur;
 
-    printf("");
+    printf("moyenne est : %.2f\n", moyenne);
+    printf("la note maximal est : %.2f\n", max);
+    printf("la note minimal est : %.2f\n", min);
 }
