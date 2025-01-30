@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 int main() {
-    float note, somme = 0, moyenne, min = 20, max = 0, noteCompteur;
+    float note, somme = 0, moyenne, min = 20, max = 0, noteCompteur = 0;
     char continu;
 
     do {
-        printf("entrez la note :\n")
+        printf("entrez la note :\n");
         scanf("%f", &note);
 
         noteCompteur++;
