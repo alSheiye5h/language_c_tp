@@ -2,14 +2,16 @@
 #include <stdlib.h>
 
 int main() {
-    float note, somme = 0, moyenne, min = 20, max = 0;
+    float note, somme = 0, moyenne, min = 20, max = 0, noteCompteur;
     char continu;
 
     do {
         printf("entrez la note :\n")
         scanf("%f", &note);
 
+        noteCompteur++;
         somme += note;
+        
         if (note < min) {
             min = note;
         }
@@ -23,6 +25,8 @@ int main() {
         } while (continu != 'O' && continu != 'o' && continu != 'N' && continu != 'n');
         
     } while (continu == 'O' || continu == 'o');
+
+    moyenne = somme
 
     printf("");
 }
