@@ -1,35 +1,86 @@
 exercice 1:
 
-reel note, somme = 0, moyenne, min = 20, max = 0, noteCompteur = 0;
-caractere continu;
+    reel note, somme = 0, moyenne, min = 20, max = 0, noteCompteur = 0;
+    caractere continu;
 
-debut
-
-repeter {
-    repeter {
-        ecrire("entrez la note :");
-        lire(note);
-    } jusqu'a (note >= 0 et note <= 20);
-
-    noteCompteur <-- noteCompteur + 1;
-    somme <-- somme + note;
-
-    si (note < min) alors 
-        min <-- note;
-    fSi
-
-    si (note > max) alors
-        max <-- note;
-    fSi
+    debut
 
     repeter {
-        ecrire("entrez la note :");
-        lire(note);
-    } jusqu'a (continu = 'O' ou continu = 'o' ou continu = 'N' ou continu = 'n');
-} jusqu'a (continu = 'N' ou continu = 'n');
+        repeter {
+            ecrire("entrez la note :");
+            lire(note);
+        } jusqu'a (note >= 0 et note <= 20);
 
-moyenne <-- somme / noteCompteur;
+        noteCompteur <-- noteCompteur + 1;
+        somme <-- somme + note;
 
-ecrire("moyenne est : ", moyenne);
-ecrire("la note maximal est : ", max);
-ecrire("la note minimal est : ", min);
+        si (note < min) alors 
+            min <-- note;
+        fSi
+
+        si (note > max) alors
+            max <-- note;
+        fSi
+
+        repeter {
+            ecrire("entrez la note :");
+            lire(note);
+        } jusqu'a (continu = 'O' ou continu = 'o' ou continu = 'N' ou continu = 'n');
+    } jusqu'a (continu = 'N' ou continu = 'n');
+
+    moyenne <-- somme / noteCompteur;
+
+    ecrire("moyenne est : ", moyenne);
+    ecrire("la note maximal est : ", max);
+    ecrire("la note minimal est : ", min);
+
+    fin
+
+exercice 2:
+
+    entier nombre, nombre1, max = 0, min = 9, nChfr = 0, nChfrPair = 0, nChfrImpair = 0, palindrome = 0, reste;
+
+    debut
+
+    repeter {
+        ecrire("entrez un nombre :");
+        lire(nombre);
+    } jusqu'a (nombre > 0)
+
+    nombre1 <-- nombre;
+
+    repeter {
+        reste <-- nombre % 10;
+        si (reste < min) alors 
+            min <-- reste;
+        fSi
+
+        si (reste > max) alors
+            max <-- reste;
+        fSi
+        
+        nChfr <-- nChfr + 1;
+
+        si (nombre % 2 = 0) alors
+            nChfrPair <-- nChfrPair + 1;
+        sinon
+            nChfrImpair <-- nChfrImpair + 1;
+
+        palindrome <-- palindrome * 10 + reste;
+        nombre <-- nombre / 10;
+
+    } jusqu'a (nombre = 0);
+
+    ecrire("le chiffre le plus grand est :", max);
+    ecrire("le chiffre le plus petit est : ", min);
+    ecrire("le nombre de chiffre est : ", nChfr);
+    ecrire("le nombre de chiffre Pair est : ", nChfrPair);
+    ecrire("le nombre de chiffre Impair est : ", nChfrImpair);
+    si (palindrome = nombre1) alors
+        ecrire("le nombre est palindrome");
+    sinon 
+        ecrire("le nombre n'est pas palindrome");
+    
+    fin
+
+
