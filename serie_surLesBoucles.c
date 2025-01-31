@@ -2,6 +2,11 @@
 #include <stdlib.h>
 
 
+int main() {
+    
+}
+
+
 int ex2() {
     int nombre, nombre1, max = 0, min = 9, nChfr = 0, nChfrPair = 0, nChfrImpair = 0, palindrome = 0, reste;
 
