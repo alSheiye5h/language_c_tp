@@ -1,0 +1,35 @@
+exercice 1:
+
+reel note, somme = 0, moyenne, min = 20, max = 0, noteCompteur = 0;
+caractere continu;
+
+debut
+
+repeter {
+    repeter {
+        ecrire("entrez la note :");
+        lire(note);
+    } jusqu'a (note >= 0 et note <= 20);
+
+    noteCompteur <-- noteCompteur + 1;
+    somme <-- somme + note;
+
+    si (note < min) alors 
+        min <-- note;
+    fSi
+
+    si (note > max) alors
+        max <-- note;
+    fSi
+
+    repeter {
+        ecrire("entrez la note :");
+        lire(note);
+    } jusqu'a (continu = 'O' ou continu = 'o' ou continu = 'N' ou continu = 'n');
+} jusqu'a (continu = 'N' ou continu = 'n');
+
+moyenne <-- somme / noteCompteur;
+
+ecrire("moyenne est : ", moyenne);
+ecrire("la note maximal est : ", max);
+ecrire("la note minimal est : ", min);
